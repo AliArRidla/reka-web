@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Tambah Data Mesin</title>
+    <title>Edit Data Mesin</title>
     <link rel="icon" href="../assets/img/reka-logo.png">
 
     <!-- General CSS Files -->
@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="section-body">
-                        <h2 class="section-title">Tambah Data Mesin</h2>
+                        <h2 class="section-title">Edit Data Mesin</h2>
                         <div class="container">
                             <div class="card">
                                 <form>
@@ -60,7 +60,7 @@
                                         </div>
                                     </div>
                                     <div class="card-footer text-left">
-                                        <button class="btn btn-primary">Tambah</button>
+                                        <button class="btn btn-primary">Update</button>
                                     </div>
                                 </form>
                             </div>

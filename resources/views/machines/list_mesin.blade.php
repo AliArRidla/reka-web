@@ -43,44 +43,40 @@
                     <div class="section-body">
                         <h2 class="section-title">List Mesin</h2>
                         <div class="container">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <table class="table table-bordered-2">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">No.</th>
-                                                    <th scope="col">ID Mesin</th>
-                                                    <th scope="col">Nama Mesin</th>
-                                                    <th scope="col">Type Mesin</th>
-                                                    <th scope="col">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>1</td>
-                                                    <td>Mesin Jahit</td>
-                                                    <td>Mesin Jahit</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <table class="table table-bordered-2">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">No.</th>
+                                                <th scope="col">ID Mesin</th>
+                                                <th scope="col">Nama Mesin</th>
+                                                <th scope="col">Type Mesin</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>1</td>
+                                                <td>Mesin Jahit</td>
+                                                <td>Mesin Jahit</td>
+                                                <td><a href="edit_mesin" class="btn btn-icon btn-primary"><i
+                                                            class="far fa-edit"></i></a>
+                                                    <a href="#" class="btn btn-icon btn-danger"><i
+                                                            class="fas fa-times"></i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
             </div>
-            <footer class="main-footer">
-                <div class="footer-left">
-                    Copyright &copy; 2018 <div class="bullet"></div> Design By <a
-                        href="https://nauval.in/">Muhamad Nauval Azhar</a>
-                </div>
-                <div class="footer-right">
-                    2.3.0
-                </div>
-            </footer>
+            </section>
         </div>
+    </div>
     </div>
 
     <!-- General JS Scripts -->

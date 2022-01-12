@@ -4,7 +4,7 @@
             <a href="/">REKAINDO GLOBAL JASA</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">REKA</a>
+            <a href="/">REKA</a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
@@ -20,8 +20,8 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Mesin</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="../machines/add_mesin">Tambah Mesin</a></li>
                     <li><a class="nav-link" href="../machines/list_mesin">List Mesin</a></li>
+                    <li><a class="nav-link" href="../machines/add_mesin">Tambah Data Mesin</a></li>
                 </ul>
             </li>
 
