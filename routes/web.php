@@ -32,3 +32,11 @@ Route::get('/auth/forgot-password', function () {
 Route::get('/auth/reset-password', function () {
     return view('auth/reset-password');
 });
+
+Route::get('/machines/add_mesin', function () {
+    return view('machines/add_mesin');
+});
+
+Route::get('/machines/list_mesin', function () {
+    return view('machines/list_mesin');
+});
