@@ -13,7 +13,7 @@ class CreateMesinsTable extends Migration
      */
     public function up()
     {
-        Schema::create('mesin', function (Blueprint $table) {
+        Schema::create('mesins', function (Blueprint $table) {
             $table->id();
             $table->string('nama_mesin');
             $table->string('type_mesin');
@@ -29,6 +29,6 @@ class CreateMesinsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mesin');
+        Schema::dropIfExists('mesins');
     }
 }

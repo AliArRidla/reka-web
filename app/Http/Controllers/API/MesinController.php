@@ -9,13 +9,12 @@ use App\Http\Controllers\Controller;
 
 class MesinController extends Controller
 {
-    //get all data
+    // get all data
     public function all(Request $request)
     {
         $id = $request->input('id');
         $nama_mesin = $request->input('nama_mesin');
         $type_mesin = $request->input('type_mesin ');
-        $id = $request->input('id');
 
         // kondisi nya
         if ($id) {
@@ -33,5 +32,10 @@ class MesinController extends Controller
                 );
             }
         }
+
     }
+
+    // get by id 
+
+    // public function 
 }

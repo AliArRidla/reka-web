@@ -13,7 +13,7 @@ class CreatePengecekansTable extends Migration
      */
     public function up()
     {
-        Schema::create('pengecekan', function (Blueprint $table) {
+        Schema::create('pengecekans', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_mesin');
             $table->bigInteger('id_parameter');
@@ -31,6 +31,6 @@ class CreatePengecekansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pengecekan');
+        Schema::dropIfExists('pengecekans');
     }
 }
