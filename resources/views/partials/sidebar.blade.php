@@ -1,7 +1,7 @@
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">Stisla</a>
+            <a href="index.html">REKAINDO GLOBAL JASA</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">St</a>
@@ -15,7 +15,7 @@
                     <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
                 </ul>
             </li>
-            <li class="menu-header">Starter</li>
+            <li class="menu-header">Menu</li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Layout</span></a>
@@ -54,29 +54,7 @@
                     <li><a class="nav-link" href="bootstrap-typography.html">Typography</a></li>
                 </ul>
             </li>
-            <li class="menu-header">Stisla</li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i>
-                    <span>Components</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="components-article.html">Article</a></li>
-                    <li><a class="nav-link beep beep-sidebar" href="components-avatar.html">Avatar</a></li>
-                    <li><a class="nav-link" href="components-chat-box.html">Chat Box</a></li>
-                    <li><a class="nav-link beep beep-sidebar" href="components-empty-state.html">Empty
-                            State</a></li>
-                    <li><a class="nav-link" href="components-gallery.html">Gallery</a></li>
-                    <li><a class="nav-link beep beep-sidebar" href="components-hero.html">Hero</a></li>
-                    <li><a class="nav-link" href="components-multiple-upload.html">Multiple
-                            Upload</a></li>
-                    <li><a class="nav-link beep beep-sidebar" href="components-pricing.html">Pricing</a>
-                    </li>
-                    <li><a class="nav-link" href="components-statistic.html">Statistic</a></li>
-                    <li><a class="nav-link" href="components-tab.html">Tab</a></li>
-                    <li><a class="nav-link" href="components-table.html">Table</a></li>
-                    <li><a class="nav-link" href="components-user.html">User</a></li>
-                    <li><a class="nav-link beep beep-sidebar" href="components-wizard.html">Wizard</a></li>
-                </ul>
-            </li>
+     
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i>
                     <span>Forms</span></a>
@@ -100,34 +78,16 @@
                     <li><a href="gmaps-simple.html">Simple</a></li>
                 </ul>
             </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-plug"></i>
-                    <span>Modules</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="modules-calendar.html">Calendar</a></li>
-                    <li><a class="nav-link" href="modules-chartjs.html">ChartJS</a></li>
-                    <li><a class="nav-link" href="modules-datatables.html">DataTables</a></li>
-                    <li><a class="nav-link" href="modules-flag.html">Flag</a></li>
-                    <li><a class="nav-link" href="modules-font-awesome.html">Font Awesome</a></li>
-                    <li><a class="nav-link" href="modules-ion-icons.html">Ion Icons</a></li>
-                    <li><a class="nav-link" href="modules-owl-carousel.html">Owl Carousel</a></li>
-                    <li><a class="nav-link" href="modules-sparkline.html">Sparkline</a></li>
-                    <li><a class="nav-link" href="modules-sweet-alert.html">Sweet Alert</a></li>
-                    <li><a class="nav-link" href="modules-toastr.html">Toastr</a></li>
-                    <li><a class="nav-link" href="modules-vector-map.html">Vector Map</a></li>
-                    <li><a class="nav-link" href="modules-weather-icon.html">Weather Icon</a></li>
-                </ul>
-            </li>
+
             <li class="menu-header">Pages</li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i>
                     <span>Auth</span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="auth-forgot-password.html">Forgot Password</a></li>
-                    <li><a href="auth-login.html">Login</a></li>
-                    <li><a class="beep beep-sidebar" href="auth-login-2.html">Login 2</a></li>
-                    <li><a href="auth-register.html">Register</a></li>
-                    <li><a href="auth-reset-password.html">Reset Password</a></li>
+                    <li><a href="auth/login">Login</a></li>
+                    <li><a href="auth/register">Register</a></li>
+                    <li><a href="auth/forgot-password">Forgot Password</a></li>
+                    <li><a href="auth/reset-password">Reset Password</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
