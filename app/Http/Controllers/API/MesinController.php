@@ -16,12 +16,12 @@ class MesinController extends Controller
         $nama_mesin = $request->input('nama_mesin');
         $type_mesin = $request->input('type_mesin ');
 
-        // kondisi nya
+        // jika user ada memasukkan id
         if ($id) {
-            $mesin = Mesin::find($id);
-            if ($mesin) {
+            $mesins = Mesin::find($id);
+            if ($mesins) {
                 return ResponseFormatter::success(
-                    $mesin,
+                    $mesins,
                     'Data mesin berhasil diambil'
                 );
             } else {
@@ -33,6 +33,12 @@ class MesinController extends Controller
             }
         }
 
+        // jika tidak maka 
+        $mesins = Mesin::all();
+        return ResponseFormatter::success(
+            $mesins,
+            'Data list produk berhasil diambil'
+        );
     }
 
     // get by id 
