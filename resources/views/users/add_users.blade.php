@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Tambah Data Mesin</title>
+    <title>Tambah User</title>
     <link rel="icon" href="../assets/img/reka-logo.png">
 
     <!-- General CSS Files -->
@@ -35,8 +35,8 @@
                         <h1>Mesin</h1>
                         <div class="section-header-breadcrumb">
                             <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                            <div class="breadcrumb-item"><a href="#">Mesin</a></div>
-                            <div class="breadcrumb-item">Tambah Data Mesin</div>
+                            <div class="breadcrumb-item"><a href="#">Forms</a></div>
+                            <div class="breadcrumb-item">Mesin</div>
                         </div>
                     </div>
 

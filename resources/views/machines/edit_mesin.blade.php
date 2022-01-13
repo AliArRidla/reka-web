@@ -35,8 +35,8 @@
                         <h1>Mesin</h1>
                         <div class="section-header-breadcrumb">
                             <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                            <div class="breadcrumb-item"><a href="#">Forms</a></div>
-                            <div class="breadcrumb-item">Mesin</div>
+                            <div class="breadcrumb-item"><a href="#">Mesin</a></div>
+                            <div class="breadcrumb-item">Edit Data Mesin</div>
                         </div>
                     </div>
 
