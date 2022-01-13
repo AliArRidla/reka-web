@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Daftar User</title>
+    <title>Riwayat Pengecekan</title>
     <link rel="icon" href="../assets/img/reka-logo.png">
 
     <!-- General CSS Files -->
@@ -32,15 +32,15 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Users</h1>
+                        <h1>History</h1>
                         <div class="section-header-breadcrumb">
                             <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                            <div class="breadcrumb-item"><a href="#">History</a></div>
+                            <div class="breadcrumb-item">History</div>
                         </div>
                     </div>
 
                     <div class="section-body">
-                        <h2 class="section-title">Daftar User</h2>
+                        <h2 class="section-title">Riwayat Pengecekan</h2>
                         <div class="container">
                             <div class="card">
                                 <div class="card-body">
@@ -48,11 +48,11 @@
                                         <thead>
                                             <tr>
                                                 <th scope="col">No.</th>
-                                                <th scope="col">User ID</th>
-                                                <th scope="col">Nama</th>
-                                                <th scope="col">Email</th>
-                                                <th scope="col">No. Telp</th>
-                                                <th scope="col">Roles</th>
+                                                <th scope="col">History ID</th>
+                                                <th scope="col">Foto Mesin</th>
+                                                <th scope="col">Nama Mesin</th>
+                                                <th scope="col">Tanggal</th>
+                                                <th scope="col">Operator</th>
                                                 <th scope="col">Action</th>
                                             </tr>
                                         </thead>
@@ -60,10 +60,10 @@
                                             <tr>
                                                 <th scope="row">1</th>
                                                 <td>1</td>
-                                                <td>User Tampan</td>
-                                                <td>user@gmail.com</td>
-                                                <td>08123</td>
-                                                <td>Operator</td>
+                                                <td>ini foto</td>
+                                                <td>Mesin Cutting</td>
+                                                <td>13-01-2022</td>
+                                                <td>Subangkit</td>
                                                 <td><a href="edit_users" class="btn btn-icon btn-primary"><i
                                                             class="far fa-edit"></i></a>
                                                     <a href="#" class="btn btn-icon btn-danger"><i

@@ -48,15 +48,15 @@
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label>ID Mesin</label>
-                                            <input type="text" class="form-control" required="">
+                                            <input type="number" class="form-control" required="">
                                         </div>
                                         <div class="form-group">
                                             <label>Nama Mesin</label>
-                                            <input type="email" class="form-control" required="">
+                                            <input type="text" class="form-control" required="">
                                         </div>
                                         <div class="form-group">
                                             <label>Type Mesin</label>
-                                            <input type="email" class="form-control">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="card-footer text-left">

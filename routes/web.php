@@ -64,3 +64,8 @@ Route::get('/users/list_users', function () {
 Route::get('/users/edit_users', function () {
     return view('users/edit_users');
 });
+
+// route history
+Route::get('/history/history', function () {
+    return view('/history/history');
+});
