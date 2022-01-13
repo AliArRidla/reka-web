@@ -44,3 +44,10 @@ Route::get('/machines/list_mesin', function () {
 Route::get('/machines/edit_mesin', function () {
     return view('machines/edit_mesin');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
