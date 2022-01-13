@@ -13,26 +13,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/auth/login', function () {
+//     return view('auth/login');
+// });
+
+// Route::get('/auth/register', function () {
+//     return view('auth/register');
+// });
+
+// Route::get('/auth/forgot-password', function () {
+//     return view('auth/forgot-password');
+// });
+
+// Route::get('/auth/reset-password', function () {
+//     return view('auth/reset-password');
+// });
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
-Route::get('/auth/login', function () {
-    return view('auth/login');
-});
 
-Route::get('/auth/register', function () {
-    return view('auth/register');
-});
-
-Route::get('/auth/forgot-password', function () {
-    return view('auth/forgot-password');
-});
-
-Route::get('/auth/reset-password', function () {
-    return view('auth/reset-password');
-});
-
+//  ini adalah route mesin 
 Route::get('/machines/add_mesin', function () {
     return view('machines/add_mesin');
 });
@@ -44,10 +51,3 @@ Route::get('/machines/list_mesin', function () {
 Route::get('/machines/edit_mesin', function () {
     return view('machines/edit_mesin');
 });
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
