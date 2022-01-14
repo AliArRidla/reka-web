@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Edit Data Mesin</title>
+    <title>Daftar User</title>
     <link rel="icon" href="../assets/img/reka-logo.png">
 
     <!-- General CSS Files -->
@@ -32,45 +32,54 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Mesin</h1>
+                        <h1>Users</h1>
                         <div class="section-header-breadcrumb">
                             <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                            <div class="breadcrumb-item"><a href="#">Mesin</a></div>
-                            <div class="breadcrumb-item">Edit Data Mesin</div>
+                            <div class="breadcrumb-item"><a href="#">History</a></div>
                         </div>
                     </div>
 
                     <div class="section-body">
-                        <h2 class="section-title">Edit Data Mesin</h2>
+                        <h2 class="section-title">Daftar User</h2>
                         <div class="container">
                             <div class="card">
-                                <form>
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <label>ID Mesin</label>
-                                            <input type="text" class="form-control" required="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Nama Mesin</label>
-                                            <input type="email" class="form-control" required="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Type Mesin</label>
-                                            <input type="email" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="card-footer text-left">
-                                        <button class="btn btn-primary">Update</button>
-                                    </div>
-                                </form>
+                                <div class="card-body">
+                                    <table class="table table-bordered-2">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">No.</th>
+                                                <th scope="col">User ID</th>
+                                                <th scope="col">Nama</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">No. Telp</th>
+                                                <th scope="col">Roles</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>1</td>
+                                                <td>User Tampan</td>
+                                                <td>user@gmail.com</td>
+                                                <td>08123</td>
+                                                <td>Operator</td>
+                                                <td><a href="edit_users" class="btn btn-icon btn-primary"><i
+                                                            class="far fa-edit"></i></a>
+                                                    <a href="#" class="btn btn-icon btn-danger"><i
+                                                            class="fas fa-times"></i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </section>
             </div>
-            </section>
         </div>
     </div>
-
 
     <!-- General JS Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"

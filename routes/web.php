@@ -51,3 +51,21 @@ Route::get('/machines/list_mesin', function () {
 Route::get('/machines/edit_mesin', function () {
     return view('machines/edit_mesin');
 });
+
+// route users
+Route::get('/users/add_users', function () {
+    return view('users/add_users');
+});
+
+Route::get('/users/list_users', function () {
+    return view('users/list_users');
+});
+
+Route::get('/users/edit_users', function () {
+    return view('users/edit_users');
+});
+
+// route history
+Route::get('/history/history', function () {
+    return view('/history/history');
+});

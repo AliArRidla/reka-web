@@ -35,8 +35,8 @@
                         <h1>Mesin</h1>
                         <div class="section-header-breadcrumb">
                             <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                            <div class="breadcrumb-item"><a href="#">Forms</a></div>
-                            <div class="breadcrumb-item">Mesin</div>
+                            <div class="breadcrumb-item"><a href="#">Mesin</a></div>
+                            <div class="breadcrumb-item">Tambah Data Mesin</div>
                         </div>
                     </div>
 
@@ -48,15 +48,15 @@
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label>ID Mesin</label>
-                                            <input type="text" class="form-control" required="">
+                                            <input type="number" class="form-control" required="">
                                         </div>
                                         <div class="form-group">
                                             <label>Nama Mesin</label>
-                                            <input type="email" class="form-control" required="">
+                                            <input type="text" class="form-control" required="">
                                         </div>
                                         <div class="form-group">
                                             <label>Type Mesin</label>
-                                            <input type="email" class="form-control">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="card-footer text-left">
