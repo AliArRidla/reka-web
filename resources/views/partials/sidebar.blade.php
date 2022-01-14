@@ -31,6 +31,14 @@
                 <a href="../history/history" class="nav-link"><i class="fas fa-columns"></i>
                     <span>History</span></a>
             </li>
+            <li class="nav-item dropdown">
+                <a href="" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                    <span>Profile</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="../users/list_users">Daftar Users</a></li>
+                    <li><a class="nav-link" href="../users/add_users">Tambah Users</a></li>
+                </ul>
+            </li>
         </ul>
     </aside>
 </div>
