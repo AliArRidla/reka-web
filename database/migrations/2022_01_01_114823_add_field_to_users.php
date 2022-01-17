@@ -17,6 +17,7 @@ class AddFieldToUsers extends Migration
             // menambahkan field roles
             $table->string('roles')->after('email')->default('OPERATOR');
             $table->string('phone')->after('email')->nullable();
+            $table->text('profile_photo_path')->nullable();
         });
     }
 
