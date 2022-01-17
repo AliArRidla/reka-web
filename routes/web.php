@@ -69,3 +69,12 @@ Route::get('/users/edit_users', function () {
 Route::get('/history/history', function () {
     return view('/history/history');
 });
+
+//route profile menu
+Route::get('/profile/view_profile', function () {
+    return view('/profile/view_profile');
+});
+
+Route::get('/profile/edit_profile', function () {
+    return view('/profile/edit_profile');
+}); 
