@@ -48,7 +48,7 @@ class UserController extends Controller
 
         $input = $request->all();        
         $users = User::create($input);
-        $users = Mesin::all();
+        $users = User::all();
         return view('users.index',compact('users'))->with('success', ' User baru berhasil ditambah.');        
     }
 
