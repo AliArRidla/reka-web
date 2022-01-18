@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MesinController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,17 +41,19 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 //  ini adalah route mesin 
-Route::get('/machines/add_mesin', function () {
-    return view('machines/add_mesin');
-});
+// Route::get('/machines/add_mesin', function () {
+//     return view('machines/add_mesin');
+// });
 
-Route::get('/machines/list_mesin', function () {
-    return view('machines/list_mesin');
-});
+// Route::get('/machines/list_mesin', function () {
+//     return view('machines/list_mesin');
+// });
 
-Route::get('/machines/edit_mesin', function () {
-    return view('machines/edit_mesin');
-});
+// Route::get('/machines/edit_mesin', function () {
+//     return view('machines/edit_mesin');
+// });
+
+Route::resource('machines', MesinController::class);
 
 // route users
 Route::get('/users/add_users', function () {
