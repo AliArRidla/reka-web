@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MesinController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,19 +55,19 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // });
 
 Route::resource('machines', MesinController::class);
-
+Route::resource('users', UserController::class);
 // route users
-Route::get('/users/add_users', function () {
-    return view('users/add_users');
-});
+// Route::get('/users/add_users', function () {
+//     return view('users/add_users');
+// });
 
-Route::get('/users/list_users', function () {
-    return view('users/list_users');
-});
+// Route::get('/users/list_users', function () {
+//     return view('users/list_users');
+// });
 
-Route::get('/users/edit_users', function () {
-    return view('users/edit_users');
-});
+// Route::get('/users/edit_users', function () {
+//     return view('users/edit_users');
+// });
 
 // route history
 Route::get('/history/history', function () {

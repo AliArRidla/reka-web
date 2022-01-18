@@ -23,7 +23,7 @@
                 <a href="" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Users / Roles ?</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="../users/list_users">Daftar Users</a></li>
+                    <li><a class="nav-link" href="{{ URL::to('users') }}">Daftar Users</a></li>
                     <li><a class="nav-link" href="../users/add_users">Tambah Users</a></li>
                 </ul>
             </li>
