@@ -56,10 +56,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('machines', MesinController::class);
 Route::resource('users', UserController::class);
+
 // route users
-// Route::get('/users/add_users', function () {
-//     return view('users/add_users');
-// });
+Route::get('/users/create', function () {
+    return view('users/create');
+});
 
 // Route::get('/users/list_users', function () {
 //     return view('users/list_users');

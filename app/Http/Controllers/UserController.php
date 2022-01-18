@@ -16,7 +16,7 @@ class UserController extends Controller
     {
         //
         $users = User::all();
-        return view('users.index')->with('users',$users);
+        return view('users.index')->with('users', $users);
     }
 
     /**
@@ -26,7 +26,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        // load the create form (resources/views/users/create.blade.php)
+        return view('users.create');
     }
 
     /**
@@ -37,7 +38,19 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'phone' => 'required',
+            'roles' => 'required',
+        ]);
+
+        $input = $request->all();
+
+        $post = User::create($input);
+
+        return back()->with('success', ' Post baru berhasil dibuat.');
     }
 
     /**

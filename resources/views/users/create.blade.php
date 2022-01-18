@@ -36,23 +36,24 @@
                         <div class="section-header-breadcrumb">
                             <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
                             <div class="breadcrumb-item"><a href="#">Users</a></div>
-                            <div class="breadcrumb-item">Tambah Data Users</div>
+                            <div class="breadcrumb-item">Tambah Data User</div>
                         </div>
                     </div>
 
                     <div class="section-body">
-                        <h2 class="section-title">Tambah Data Users</h2>
+                        <h2 class="section-title">Tambah Data User</h2>
                         <div class="container">
                             <div class="card">
-                                <form>
+                                <form method="POST" action="{{ url('users') }}" >
+                                    @csrf
                                     <div class="card-body">
-                                        <div class="form-group">
+                                        {{--  <div class="form-group">
                                             <label>User ID</label>
-                                            <input type="number" class="form-control" required="">
-                                        </div>
+                                            <input type="text" class="form-control" required="">
+                                        </div>  --}}
                                         <div class="form-group">
                                             <label>Nama</label>
-                                            <input type="text" class="form-control" required="">
+                                            <input type="text" class="form-control">
                                         </div>
                                         <div class="form-group">
                                             <label>Email</label>
@@ -62,13 +63,13 @@
                                             <label>Nomor Telepon</label>
                                             <input type="text" class="form-control">
                                         </div>
-                                        <div class="form-group">
+                                        {{--  <div class="form-group">
                                             <label>Roles</label>
                                             <input type="text" class="form-control">
-                                        </div>
+                                        </div>  --}}
                                     </div>
                                     <div class="card-footer text-left">
-                                        <button class="btn btn-primary">Tambah</button>
+                                        <button class="btn btn-primary">Submit</button>
                                     </div>
                                 </form>
                             </div>

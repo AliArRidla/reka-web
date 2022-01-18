@@ -24,7 +24,7 @@
                     <span>User Admin</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ URL::to('users') }}">Daftar Users</a></li>
-                    <li><a class="nav-link" href="../users/add_users">Tambah Users</a></li>
+                    <li><a class="nav-link" href="../users/create">Tambah Users</a></li>
                 </ul>
             </li>
             <li class="nav-item">
