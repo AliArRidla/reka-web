@@ -61,7 +61,7 @@
                                                                                             
                                             <tr>
                                                 <th scope="row">1</th>
-                                                <td>1</td>
+                                                {{-- <td>1</td> --}}
                                                 <td>{{$item->id}}</td>
                                                 <td>{{$item->name}}</td>
                                                 <td>08123</td>

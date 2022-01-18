@@ -16,7 +16,7 @@
                     <span>Mesin</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ URL::to('machines') }}">Daftar Mesin</a></li>
-                    <li><a class="nav-link" href="../machines/add_mesin">Tambah Data Mesin</a></li>
+                    <li><a class="nav-link" href="{{ URL::to('machines/create') }}">Tambah Data Mesin</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
