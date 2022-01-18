@@ -35,7 +35,7 @@
                         <h1>Users</h1>
                         <div class="section-header-breadcrumb">
                             <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                            <div class="breadcrumb-item"><a href="#">History</a></div>
+                            <div class="breadcrumb-item"><a href="#">User</a></div>
                         </div>
                     </div>
 
@@ -57,19 +57,25 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>1</td>
-                                                <td>User Tampan</td>
-                                                <td>user@gmail.com</td>
-                                                <td>08123</td>
-                                                <td>Operator</td>
-                                                <td><a href="edit_users" class="btn btn-icon btn-primary"><i
-                                                            class="far fa-edit"></i></a>
-                                                    <a href="#" class="btn btn-icon btn-danger"><i
-                                                            class="fas fa-times"></i></a>
-                                                </td>
-                                            </tr>
+                                            @php
+                                                $i = 1;
+                                            @endphp
+                                            @foreach ($user as $data)
+                                                <tr>
+                                                    {{-- <th scope="row">1</th> --}}
+                                                    <td>{{ $i++ }}</td>
+                                                    <td>{{ $data->id }}</td>
+                                                    <td>{{ $data->name }}</td>
+                                                    <td>{{ $data->email }}</td>
+                                                    <td>{{ $data->phone }}</td>
+                                                    <td>{{ $data->roles }}</td>
+                                                    <td><a href="edit_users" class="btn btn-icon btn-primary"><i
+                                                                class="far fa-edit"></i></a>
+                                                        <a href="#" class="btn btn-icon btn-danger"><i
+                                                                class="fas fa-times"></i></a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

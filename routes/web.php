@@ -33,7 +33,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -57,6 +57,8 @@ Route::get('/users/add_users', function () {
     return view('users/add_users');
 });
 
+Route::get('/users/list_users', 'App\Http\Controllers\UserController@index');
+
 Route::get('/users/list_users', function () {
     return view('users/list_users');
 });
@@ -79,6 +81,6 @@ Route::get('/profile/edit_profile', function () {
     return view('/profile/edit_profile');
 }); 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
+    return view('home');
+})->name('home');
