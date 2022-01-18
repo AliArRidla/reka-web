@@ -46,11 +46,10 @@ class UserController extends Controller
             'roles' => 'required',
         ]);
 
-        $input = $request->all();
-
-        $post = User::create($input);
-
-        return back()->with('success', ' Post baru berhasil dibuat.');
+        $input = $request->all();        
+        $users = User::create($input);
+        $users = Mesin::all();
+        return view('users.index',compact('users'))->with('success', ' User baru berhasil ditambah.');        
     }
 
     /**
