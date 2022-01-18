@@ -15,30 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/auth/login', function () {
-//     return view('auth/login');
-// });
+// Auth::routes();
 
-// Route::get('/auth/register', function () {
-//     return view('auth/register');
-// });
-
-// Route::get('/auth/forgot-password', function () {
-//     return view('auth/forgot-password');
-// });
-
-// Route::get('/auth/reset-password', function () {
-//     return view('auth/reset-password');
-// });
-
-
-Auth::routes();
+Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
+    return view('home');
+})->name('home');
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 //  ini adalah route mesin 
@@ -71,19 +58,15 @@ Route::resource('users', UserController::class);
 // });
 
 // route history
-Route::get('/history/history', function () {
-    return view('/history/history');
-});
+// Route::get('/history/history', function () {
+//     return view('/history/history');
+// });
 
-//route profile menu
-Route::get('/profile/view_profile', function () {
-    return view('/profile/view_profile');
-});
+// //route profile menu
+// Route::get('/profile/view_profile', function () {
+//     return view('/profile/view_profile');
+// });
 
-Route::get('/profile/edit_profile', function () {
-    return view('/profile/edit_profile');
-}); 
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
-    return view('home');
-})->name('home');
+// Route::get('/profile/edit_profile', function () {
+//     return view('/profile/edit_profile');
+// });
