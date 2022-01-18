@@ -47,28 +47,26 @@
                                     <table class="table table-bordered-2">
                                         <thead>
                                             <tr>
-                                                <th scope="col">No.</th>
-                                                <th scope="col">User ID</th>
-                                                <th scope="col">Nama</th>
-                                                <th scope="col">Email</th>
-                                                <th scope="col">No. Telp</th>
-                                                <th scope="col">Roles</th>
-                                                <th scope="col">Action</th>
+                                                <th>User ID</th>
+                                                <th>Nama</th>
+                                                <th>Email</th>
+                                                <th>No. Telp</th>
+                                                <th>Roles</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @php
                                                 $i = 1;
                                             @endphp
-                                            @foreach ($user as $data)
+
+                                            @foreach ($users as $item)
                                                 <tr>
-                                                    {{-- <th scope="row">1</th> --}}
-                                                    <td>{{ $i++ }}</td>
-                                                    <td>{{ $data->id }}</td>
-                                                    <td>{{ $data->name }}</td>
-                                                    <td>{{ $data->email }}</td>
-                                                    <td>{{ $data->phone }}</td>
-                                                    <td>{{ $data->roles }}</td>
+                                                    <td>{{ $item->id }}</td>
+                                                    <td>{{ $item->name }}</td>
+                                                    <td>{{ $item->email }}</td>
+                                                    <td>{{ $item->phone }}</td>
+                                                    <td>{{ $item->roles }}</td>
                                                     <td><a href="edit_users" class="btn btn-icon btn-primary"><i
                                                                 class="far fa-edit"></i></a>
                                                         <a href="#" class="btn btn-icon btn-danger"><i

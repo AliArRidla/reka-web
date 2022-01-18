@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -14,10 +14,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        // mengambil data dari table users
-        $user = DB::table('users')->get();
-        // mengirim data students ke view daftar
-        return view('list_users', ['user' => $user]);
+        //
+        $users = User::all();
+        return view('users.index')->with('users',$users);
     }
 
     /**

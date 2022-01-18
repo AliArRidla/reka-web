@@ -16,15 +16,15 @@
                     <span>Mesin</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ URL::to('machines') }}">Daftar Mesin</a></li>
-                    <li><a class="nav-link" href="../machines/add_mesin">Tambah Data Mesin</a></li>
+                    <li><a class="nav-link" href="../machines/add_mesin">Tambah Data Messssin</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
                 <a href="" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>User Admin</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="../users/list_users">Daftar User Admin</a></li>
-                    <li><a class="nav-link" href="../users/add_users">Tambah User Admin</a></li>
+                    <li><a class="nav-link" href="{{ URL::to('users') }}">Daftar Users</a></li>
+                    <li><a class="nav-link" href="../users/add_users">Tambah Users</a></li>
                 </ul>
             </li>
             <li class="nav-item">
