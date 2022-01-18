@@ -17,7 +17,10 @@ class MesinController extends Controller
     {
         //
         $machines = Mesin::all();
-        return view('machines.index')->with('machines',$machines);
+        // return view('machines.index')->with('machines',$machines);
+        return view('machines.index', compact('machines'));
+        // var_dump($machines);
+
     }
 
     /**
@@ -27,7 +30,7 @@ class MesinController extends Controller
      */
     public function create()
     {
-        //
+        return view('machines.create');
     }
 
     /**
@@ -38,7 +41,16 @@ class MesinController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama_mesin' => 'required',
+            'type_mesin' => 'required',
+        ]);
+
+        // return redirect()->index();
+        $input = $request->all();        
+        $machine = Mesin::create($input);
+        $machines = Mesin::all();
+        return view('machines.index',compact('machines'))->with('success', ' Mesin baru berhasil ditambah.');        
     }
 
     /**

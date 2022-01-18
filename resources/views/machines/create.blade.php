@@ -44,23 +44,24 @@
                         <h2 class="section-title">Tambah Data Mesin</h2>
                         <div class="container">
                             <div class="card">
-                                <form>
+                                <form method="POST" action="{{ url('machines') }}">
+                                    @csrf
                                     <div class="card-body">
-                                        <div class="form-group">
+                                        {{-- <div class="form-group">
                                             <label>ID Mesin</label>
                                             <input type="number" class="form-control" required="">
-                                        </div>
+                                        </div> --}}
                                         <div class="form-group">
                                             <label>Nama Mesin</label>
-                                            <input type="text" class="form-control" required="">
+                                            <input type="text" name="nama_mesin" class="form-control" required>
                                         </div>
                                         <div class="form-group">
                                             <label>Type Mesin</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" name="type_mesin" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="card-footer text-left">
-                                        <button class="btn btn-primary">Tambah</button>
+                                        <button class="btn btn-primary" type="submit">Tambah</button>
                                     </div>
                                 </form>
                             </div>
