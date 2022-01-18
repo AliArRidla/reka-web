@@ -56,19 +56,22 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @php
+                                                $i = 1;
+                                            @endphp
                                             @foreach ($machines as $item)
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>{{$item->id}}</td>
-                                                <td>{{$item->nama_mesin}}</td>
-                                                <td>{{$item->type_mesin}}</td>
-                                                <td><a href="edit_mesin" class="btn btn-icon btn-primary"><i
-                                                            class="far fa-edit"></i></a>
-                                                    <a href="#" class="btn btn-icon btn-danger"><i
-                                                            class="fas fa-times"></i></a>
-                                                </td>
-                                            </tr>
-                                            @endforeach                                            
+                                                <tr>
+                                                    <th scope="row">{{ $i++ }}</th>
+                                                    <td>{{ $item->id }}</td>
+                                                    <td>{{ $item->nama_mesin }}</td>
+                                                    <td>{{ $item->type_mesin }}</td>
+                                                    <td><a href="edit_mesin" class="btn btn-icon btn-primary"><i
+                                                                class="far fa-edit"></i></a>
+                                                        <a href="#" class="btn btn-icon btn-danger"><i
+                                                                class="fas fa-times"></i></a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
