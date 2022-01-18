@@ -57,11 +57,13 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($users as $item)
+                                                                                            
                                             <tr>
                                                 <th scope="row">1</th>
                                                 <td>1</td>
-                                                <td>User Tampan</td>
-                                                <td>user@gmail.com</td>
+                                                <td>{{$item->id}}</td>
+                                                <td>{{$item->name}}</td>
                                                 <td>08123</td>
                                                 <td>Operator</td>
                                                 <td><a href="edit_users" class="btn btn-icon btn-primary"><i
@@ -70,6 +72,7 @@
                                                             class="fas fa-times"></i></a>
                                                 </td>
                                             </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
