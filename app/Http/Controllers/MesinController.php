@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mesin;
+use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 
 class MesinController extends Controller
@@ -14,6 +16,8 @@ class MesinController extends Controller
     public function index()
     {
         //
+        $machines = Mesin::all();
+        return view('machines.index')->with('machines',$machines);
     }
 
     /**

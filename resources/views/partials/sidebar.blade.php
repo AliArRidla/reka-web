@@ -15,7 +15,7 @@
                 <a href="" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Mesin</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="../machines/list_mesin">Daftar Mesin</a></li>
+                    <li><a class="nav-link" href="{{ URL::to('machines') }}">Daftar Mesin</a></li>
                     <li><a class="nav-link" href="../machines/add_mesin">Tambah Data Mesin</a></li>
                 </ul>
             </li>
