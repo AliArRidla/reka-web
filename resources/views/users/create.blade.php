@@ -53,20 +53,20 @@
                                         </div>  --}}
                                         <div class="form-group">
                                             <label>Nama</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" name="name" class="form-control">
                                         </div>
                                         <div class="form-group">
                                             <label>Email</label>
-                                            <input type="email" class="form-control">
+                                            <input type="email" name="email" class="form-control">
                                         </div>
                                         <div class="form-group">
                                             <label>Nomor Telepon</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" name="phone" class="form-control">
                                         </div>
-                                        {{--  <div class="form-group">
+                                         <div class="form-group">
                                             <label>Roles</label>
-                                            <input type="text" class="form-control">
-                                        </div>  --}}
+                                            <input type="text" name="roles" class="form-control">
+                                        </div> 
                                     </div>
                                     <div class="card-footer text-left">
                                         <button class="btn btn-primary">Submit</button>
