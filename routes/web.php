@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MesinController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ParameterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,6 +44,7 @@ Route::get('/', function () {
 
 Route::resource('machines', MesinController::class);
 Route::resource('users', UserController::class);
+Route::resource('parameters', ParameterController::class);
 
 // route users
 // Route::get('/users/create', function () {

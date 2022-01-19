@@ -28,6 +28,14 @@
                 </ul>
             </li>
             <li class="nav-item">
+                <a href="" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                    <span>Parameters Mesin</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{ URL::to('parameters') }}">Daftar Parameters</a></li>
+                    <li><a class="nav-link" href="{{ URL::to('parameters/create') }}">Tambah Parameters</a></li>
+                </ul>               
+            </li>
+            <li class="nav-item">
                 <a href="../history/history" class="nav-link"><i class="fas fa-columns"></i>
                     <span>History</span></a>
             </li>

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mesin;
+use App\Models\Parameter;
 use Illuminate\Http\Request;
 
-class PengecekanController extends Controller
+class ParameterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,8 @@ class PengecekanController extends Controller
      */
     public function index()
     {
-     
+        $parameters = Parameter::all();
+        return view('parameters.index',compact('parameters'));
     }
 
     /**
@@ -23,7 +26,8 @@ class PengecekanController extends Controller
      */
     public function create()
     {
-        //
+        $mesins = Mesin::all();
+        return view('parameters.create',compact('mesins'));
     }
 
     /**
@@ -35,6 +39,18 @@ class PengecekanController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'nama_parameter' => 'required',
+            'id_mesin' => 'required',
+        ]);
+
+        // return redirect()->index();
+        $input = $request->all();        
+        $parameter = Parameter::create($input);
+        $parameters = Parameter::all();
+        // var_dump($parameter);
+        return view('parameters.index',compact('parameters'))->with('success', ' Parameters baru berhasil ditambah.');   
+
     }
 
     /**

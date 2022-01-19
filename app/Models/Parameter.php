@@ -14,7 +14,7 @@ class Parameter extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = [
+    protected $fillable = [ 
         'nama_parameter',
         'id_mesin'
     ];
@@ -25,7 +25,7 @@ class Parameter extends Model
     }
 
     public function mesin(){
-        return $this->belongsTo(Mesin::class,'id_mesin','id');
+        return $this->hasMany(Mesin::class,'id_mesin','id');
     }
 
     // public function 
