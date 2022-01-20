@@ -16,7 +16,7 @@ class UserController extends Controller
     {
         //
         $users = User::all();
-        return view('users.index')->with('users', $users);
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -41,7 +41,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required',
-            // 'password' => 'required',
+            'password' => 'required',
             'phone' => 'required',
             'roles' => 'required',
         ]);

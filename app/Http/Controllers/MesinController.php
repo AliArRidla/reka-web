@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Mesin;
 use App\Models\User;
+use App\Models\Mesin;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Input\Input;
 
 class MesinController extends Controller
 {
@@ -72,7 +73,7 @@ class MesinController extends Controller
     public function edit($id)
     {
         $machines = Mesin::find($id);
-        return view('machines.edit')
+        return view('machines.edit' ) 
             ->with('machines', $machines);
     }
 
@@ -86,13 +87,13 @@ class MesinController extends Controller
     public function update(Request $request, $id)
     {
         $machines = Mesin::find($id);
-            $machines->nama_mesin      = Input::get('nama_mesin');
-            $machines->type_mesin      = Input::get('type_mesin');
-            $shark->save();
+            $machines->nama_mesin      = Mesin::get('nama_mesin');
+            $machines->type_mesin      = Mesin::get('type_mesin');
+            $machines->save();
 
             // redirect
-            Session::flash('message', 'Successfully updated shark!');
-            return Redirect::to('machines.edit');
+            // Session::flash('message', 'Successfully updated shark!');
+            return view('machines.edit');
     }
 
     /**
@@ -107,6 +108,6 @@ class MesinController extends Controller
         $machines->delete();
 
         // redirect
-        return index();
+        return view('machines.index' compact('machines'));
     }
 }

@@ -67,7 +67,7 @@
                                                     <td>{{ $item->email }}</td>
                                                     <td>{{ $item->phone }}</td>
                                                     <td>{{ $item->roles }}</td>
-                                                    <td><a href="edit_users" class="btn btn-icon btn-primary"><i
+                                                    <td><a href="edit" class="btn btn-icon btn-primary"><i
                                                                 class="far fa-edit"></i></a>
                                                         <a href="#" class="btn btn-icon btn-danger"><i
                                                                 class="fas fa-times"></i></a>

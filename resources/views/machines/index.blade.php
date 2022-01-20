@@ -65,9 +65,9 @@
                                                     <td>{{ $item->id }}</td>
                                                     <td>{{ $item->nama_mesin }}</td>
                                                     <td>{{ $item->type_mesin }}</td>
-                                                    <td><a href="../edit" class="btn btn-icon btn-primary"><i
+                                                    <td><a href="{{ URL::to('machines/edit') }}" class="btn btn-icon btn-primary"><i
                                                                 class="far fa-edit"></i></a>
-                                                        <a href="#" class="btn btn-icon btn-danger"><i
+                                                        <a href="{{ URL::to('machines/destroy') }}" class="btn btn-icon btn-danger"><i
                                                                 class="fas fa-times"></i></a>
                                                     </td>
                                                 </tr>

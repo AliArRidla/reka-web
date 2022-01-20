@@ -44,13 +44,9 @@
                         <h2 class="section-title">Tambah Data User</h2>
                         <div class="container">
                             <div class="card">
-                                <form method="POST" action="{{ url('users') }}">
+                                <form method="POST" action="{{ url('users') }}">    
                                     @csrf
                                     <div class="card-body">
-                                        {{-- <div class="form-group">
-                                            <label>User ID</label>
-                                            <input type="text" class="form-control" required="">
-                                        </div> --}}
                                         <div class="form-group">
                                             <label>Nama</label>
                                             <input type="text" name="name" class="form-control">
@@ -70,8 +66,8 @@
                                         <div class="form-group">
                                             <label>Roles</label>
                                             <select name="roles" class="form-control" required>
-                                                <option value="admin" >Admin</option>
-                                                <option value="operator">Operator</option>
+                                                <option>Admin</option>
+                                                <option>Operator</option>
                                             </select>
                                         </div>
                                     </div>
@@ -82,8 +78,8 @@
                             </div>
                         </div>
                     </div>
+                </section>
             </div>
-            </section>
         </div>
     </div>
 
