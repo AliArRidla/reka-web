@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Mesin;
+use App\Models\User;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 
@@ -15,17 +16,15 @@ class MesinController extends Controller
      */
     public function index()
     {
-        //
         $machines = Mesin::all();
         // return view('machines.index')->with('machines',$machines);
         return view('machines.index', compact('machines'));
         // var_dump($machines);
 
     }
-
     /**
      * Show the form for creating a new resource.
-     *
+     *  
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -38,7 +37,7 @@ class MesinController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
-     */
+     */ 
     public function store(Request $request)
     {
         $request->validate([
@@ -53,7 +52,7 @@ class MesinController extends Controller
         return view('machines.index',compact('machines'))->with('success', ' Mesin baru berhasil ditambah.');        
     }
 
-    /**
+    /**0
      * Display the specified resource.
      *
      * @param  int  $id
@@ -72,7 +71,9 @@ class MesinController extends Controller
      */
     public function edit($id)
     {
-        //
+        $machines = Mesin::find($id);
+        return view('machines.edit')
+            ->with('machines', $machines);
     }
 
     /**
@@ -84,7 +85,14 @@ class MesinController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $machines = Mesin::find($id);
+            $machines->nama_mesin      = Input::get('nama_mesin');
+            $machines->type_mesin      = Input::get('type_mesin');
+            $shark->save();
+
+            // redirect
+            Session::flash('message', 'Successfully updated shark!');
+            return Redirect::to('machines.edit');
     }
 
     /**
@@ -95,6 +103,10 @@ class MesinController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $machines = Mesin::find($id);
+        $machines->delete();
+
+        // redirect
+        return index();
     }
 }

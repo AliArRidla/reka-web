@@ -44,23 +44,23 @@
                         <h2 class="section-title">Edit Data Mesin</h2>
                         <div class="container">
                             <div class="card">
-                                <form>
-                                    <div class="card-body">
+                                <form method="POST" action="{{ url('machines') }}" >
+                                    {{-- <div class="card-body">
                                         <div class="form-group">
                                             <label>ID Mesin</label>
                                             <input type="text" class="form-control" required="">
-                                        </div>
+                                        </div> --}}
                                         <div class="form-group">
                                             <label>Nama Mesin</label>
-                                            <input type="email" class="form-control" required="">
+                                            <input type="text" name="nama_mesin" class="form-control" required>
                                         </div>
                                         <div class="form-group">
                                             <label>Type Mesin</label>
-                                            <input type="email" class="form-control">
+                                            <input type="text" name="type_mesin" class="form-control" required>
                                         </div>
-                                    </div>
+                                    </div> 
                                     <div class="card-footer text-left">
-                                        <button class="btn btn-primary">Update</button>
+                                        <button class="btn btn-primary" type="submit">Update</button>
                                     </div>
                                 </form>
                             </div>

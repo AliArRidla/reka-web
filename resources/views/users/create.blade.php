@@ -44,13 +44,13 @@
                         <h2 class="section-title">Tambah Data User</h2>
                         <div class="container">
                             <div class="card">
-                                <form method="POST" action="{{ url('users') }}" >
+                                <form method="POST" action="{{ url('users') }}">
                                     @csrf
                                     <div class="card-body">
-                                        {{--  <div class="form-group">
+                                        {{-- <div class="form-group">
                                             <label>User ID</label>
                                             <input type="text" class="form-control" required="">
-                                        </div>  --}}
+                                        </div> --}}
                                         <div class="form-group">
                                             <label>Nama</label>
                                             <input type="text" name="name" class="form-control">
@@ -60,13 +60,20 @@
                                             <input type="email" name="email" class="form-control">
                                         </div>
                                         <div class="form-group">
+                                            <label>Password</label>
+                                            <input type="password" name="password" class="form-control">
+                                        </div>
+                                        <div class="form-group">
                                             <label>Nomor Telepon</label>
                                             <input type="text" name="phone" class="form-control">
                                         </div>
-                                         <div class="form-group">
+                                        <div class="form-group">
                                             <label>Roles</label>
-                                            <input type="text" name="roles" class="form-control">
-                                        </div> 
+                                            <select name="roles" class="form-control" required>
+                                                <option value="admin" >Admin</option>
+                                                <option value="operator">Operator</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="card-footer text-left">
                                         <button class="btn btn-primary">Submit</button>
