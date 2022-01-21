@@ -67,10 +67,15 @@
                                                     <td>{{ $item->email }}</td>
                                                     <td>{{ $item->phone }}</td>
                                                     <td>{{ $item->roles }}</td>
-                                                    <td><a href="{{ route('users.edit', $item->id) }}" class="btn btn-icon btn-primary"><i
+                                                    <td><a href="{{ route('users.edit', $item->id) }}"
+                                                            class="btn btn-icon btn-primary"><i
                                                                 class="far fa-edit"></i></a>
-                                                        <a href="#" class="btn btn-icon btn-danger"><i
-                                                                class="fas fa-times"></i></a>
+                                                        <form method="POST" action="{{ url('users', $item->id) }}">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                    <td style="width: 100px"><button
+                                                            class="btn-red">Hapus</button></td>
+                                                    </form>
                                                     </td>
                                                 </tr>
                                             @endforeach
