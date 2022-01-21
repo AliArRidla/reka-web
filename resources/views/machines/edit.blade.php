@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <label>Nama Mesin</label>
                             <input name="nama_mesin" value="{{ $machines->nama_mesin }}" type="text"
-                                placeholder="Nama Mesin.">
+                                 placeholder="Nama Mesin.">
                         </div>
                         <div class="form-group">
                             <label>Type Mesin</label>

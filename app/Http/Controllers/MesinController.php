@@ -73,9 +73,8 @@ class MesinController extends Controller
     {
         $machines = Mesin::findOrFail($id);
 
-        return view('machines.edit', [
-            'machines' => $machines
-        ]);
+        return view('machines.edit', compact('machines'));
+        // return view('machines.create');/
     }
 
     /**
