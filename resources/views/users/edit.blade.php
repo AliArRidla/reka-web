@@ -44,31 +44,36 @@
                         <h2 class="section-title">Edit Data Users</h2>
                         <div class="container">
                             <div class="card">
-                                <form>
+                                <form method="POST" action="{{ url('users', $users->id) }}">
+                                    @csrf
+                                    @method('PUT')
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label>User ID</label>
-                                            <input type="number" class="form-control" required="">
-                                        </div>
-                                        <div class="form-group">
                                             <label>Nama</label>
-                                            <input type="text" class="form-control" required="">
+                                            <input type="text" name="name" class="form-control" value="{{ $users->name }}">
                                         </div>
                                         <div class="form-group">
                                             <label>Email</label>
-                                            <input type="email" class="form-control">
+                                            <input type="email" name="email" class="form-control" value="{{ $users->email }}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Password</label>
+                                            <input type="password" name="password" class="form-control" value="{{ $users->password }}">
                                         </div>
                                         <div class="form-group">
                                             <label>Nomor Telepon</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" name="phone" class="form-control" value="{{ $users->phone }}">
                                         </div>
                                         <div class="form-group">
                                             <label>Roles</label>
-                                            <input type="text" class="form-control">
+                                            <select name="roles" class="form-control" al >
+                                                <option>Admin</option>
+                                                <option>Operator</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="card-footer text-left">
-                                        <button class="btn btn-primary">Tambah</button>
+                                        <button class="btn btn-primary">Edit Data</button>
                                     </div>
                                 </form>
                             </div>

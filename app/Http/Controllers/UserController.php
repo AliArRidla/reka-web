@@ -46,10 +46,10 @@ class UserController extends Controller
             'roles' => 'required',
         ]);
 
-        $input = $request->all();        
-        $users = User::create($input);
+        $input = $request->all();
+        $user = User::create($input);
         $users = User::all();
-        return view('users.index',compact('users'))->with('success', ' User baru berhasil ditambah.');        
+        return view('users.index', compact('users'))->with('success', ' User baru berhasil ditambah.');
     }
 
     /**
@@ -71,7 +71,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $users = User::findOrFail($id);
+
+        return view('users.edit', [
+            'users' => $users
+        ]);
     }
 
     /**
@@ -83,7 +87,17 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'phone' => 'required',
+            'roles' => 'required',
+        ]);
+
+        $users = User::find($id)->update($request->all());
+
+        return back()->with('success', ' Data telah diperbaharui!');
     }
 
     /**
