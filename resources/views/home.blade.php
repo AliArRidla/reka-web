@@ -5,6 +5,9 @@
         <div class="section-header">
             <h1>Dashboard</h1>
         </div>
+        <div class="section-header">
+            <h1>JANCOK</h1>
+        </div>
         <div class="card-body">
             @if (session('status'))
             <div class="alert alert-success" role="alert">

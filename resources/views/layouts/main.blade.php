@@ -27,8 +27,9 @@
             <div class="navbar-bg"></div>
 
         
-            @include('partials.sidebar')
             @include('partials.navbar')
+            @include('partials.sidebar')
+            
             <!-- Main Content -->
             <div class="main-content">
 
