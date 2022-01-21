@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use App\Models\Mesin;
+use App\Models\User;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
-use Symfony\Component\Console\Input\Input;
 
 class MesinController extends Controller
 {
@@ -18,14 +17,14 @@ class MesinController extends Controller
     public function index()
     {
         $machines = Mesin::all();
-        // return view('machines.index')->with('machines',$machines);
-        return view('machines.index', compact('machines'));
+
+        return view('machines.index', ['machines' => $machines]);
         // var_dump($machines);
 
     }
     /**
      * Show the form for creating a new resource.
-     *  
+     *
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -38,7 +37,7 @@ class MesinController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
-     */ 
+     */
     public function store(Request $request)
     {
         $request->validate([
@@ -47,10 +46,10 @@ class MesinController extends Controller
         ]);
 
         // return redirect()->index();
-        $input = $request->all();        
+        $input = $request->all();
         $machine = Mesin::create($input);
         $machines = Mesin::all();
-        return view('machines.index',compact('machines'))->with('success', ' Mesin baru berhasil ditambah.');        
+        return view('machines.index', compact('machines'))->with('success', ' Mesin baru berhasil ditambah.');
     }
 
     /**0
@@ -72,9 +71,11 @@ class MesinController extends Controller
      */
     public function edit($id)
     {
-        $machines = Mesin::find($id);
-        return view('machines.edit' ) 
-            ->with('machines', $machines);
+        $machines = Mesin::findOrFail($id);
+
+        return view('machines.edit', [
+            'machines' => $machines
+        ]);
     }
 
     /**
@@ -86,14 +87,14 @@ class MesinController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $machines = Mesin::find($id);
-            $machines->nama_mesin      = Mesin::get('nama_mesin');
-            $machines->type_mesin      = Mesin::get('type_mesin');
-            $machines->save();
+        $request->validate([
+            'nama_mesin' => 'required',
+            'type_mesin' => 'required',
+        ]);
 
-            // redirect
-            // Session::flash('message', 'Successfully updated shark!');
-            return view('machines.edit');
+        $machines = Mesin::find($id)->update($request->all());
+
+        return back()->with('success', ' Data telah diperbaharui!');
     }
 
     /**
@@ -105,9 +106,9 @@ class MesinController extends Controller
     public function destroy($id)
     {
         $machines = Mesin::find($id);
+
         $machines->delete();
 
-        // redirect
-        return view('machines.index' compact('machines'));
+        return back()->with('success', ' Penghapusan berhasil.');
     }
 }

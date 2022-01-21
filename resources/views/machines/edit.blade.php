@@ -44,19 +44,23 @@
                         <h2 class="section-title">Edit Data Mesin</h2>
                         <div class="container">
                             <div class="card">
-                                <form method="POST" action="{{ url('machines') }}">
-                                    {{-- <div class="card-body">
+                                <form method="POST" action="{{ url('machines', $machines->id) }}">
+                                    @csrf
+                                    @method('PUT')
+                                    <!-- {{-- <div class="card-body">
                                         <div class="form-group">
                                             <label>ID Mesin</label>
                                             <input type="text" class="form-control" required="">
-                                        </div> --}}
+                                        </div> --}} -->
                                     <div class="form-group">
                                         <label>Nama Mesin</label>
-                                        <input type="text" name="nama_mesin" class="form-control" required>
+                                        <input name="nama_mesin" value="{{ $machines->nama_mesin }}" type="text"
+                                            placeholder="Nama Mesin.">
                                     </div>
                                     <div class="form-group">
                                         <label>Type Mesin</label>
-                                        <input type="text" name="type_mesin" class="form-control" required>
+                                        <input name="type_mesin" value="{{ $machines->type_mesin }}" type="text"
+                                            placeholder="Type Mesin">
                                     </div>
                             </div>
                             <div class="card-footer text-left">
@@ -65,10 +69,10 @@
                             </form>
                         </div>
                     </div>
-
-                </section>
             </div>
         </div>
+        </section>
+    </div>
     </div>
 
 

@@ -59,16 +59,22 @@
                                             @php
                                                 $i = 1;
                                             @endphp
-                                            @foreach ($machines as $item)
+                                            @foreach ($machines as $machines)
                                                 <tr>
                                                     <th scope="row">{{ $i++ }}</th>
-                                                    <td>{{ $item->id }}</td>
-                                                    <td>{{ $item->nama_mesin }}</td>
-                                                    <td>{{ $item->type_mesin }}</td>
-                                                    <td><a href="{{ URL::to('machines/edit') }}" class="btn btn-icon btn-primary"><i
+                                                    <td>{{ $machines->id }}</td>
+                                                    <td>{{ $machines->nama_mesin }}</td>
+                                                    <td>{{ $machines->type_mesin }}</td>
+                                                    <td><a href="{{ route('machines.edit', $machines->id) }}"
+                                                            class="btn btn-icon btn-primary"><i
                                                                 class="far fa-edit"></i></a>
-                                                        <a href="{{ URL::to('machines/destroy') }}" class="btn btn-icon btn-danger"><i
-                                                                class="fas fa-times"></i></a>
+                                                        <form method="POST"
+                                                            action="{{ url('machines', $machines->id) }}">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                    <td style="width: 100px"><button
+                                                            class="btn-red">Hapus</button></td>
+                                                    </form>
                                                     </td>
                                                 </tr>
                                             @endforeach
