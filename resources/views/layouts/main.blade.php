@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('stisla/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('stisla/css/components.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('vendor/notyf/notyf.min.css') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
 
 </head>
 
@@ -26,9 +26,9 @@
         <div class="main-wrapper">
             <div class="navbar-bg"></div>
 
-            @include('partials.navbar')
+        
             @include('partials.sidebar')
-
+            @include('partials.navbar')
             <!-- Main Content -->
             <div class="main-content">
 
