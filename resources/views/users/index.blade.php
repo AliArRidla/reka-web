@@ -35,16 +35,18 @@
                                     <tr>
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->name }}</td>
-                                        <td>{{ $item->email }}</td>
+                                        <td>{{ $item->email }}</ptd>
                                         <td>{{ $item->phone }}</td>
                                         <td>{{ $item->roles }}</td>
-                                        <td><a href="{{ route('users.edit', $item->id) }}"
-                                                class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a>
-                                            <form method="POST" action="{{ url('users', $item->id) }}">
-                                                @csrf
-                                                @method('DELETE')
-                                        <td style="width: 100px"><button class="btn-red">Hapus</button></td>
-                                        </form>
+                                        <td> <form method="POST" action="{{ url('users', $item->id) }}">
+                                            <a href="{{ route('users.edit', $item->id) }}"
+                                                class="btn btn-icon btn-primary"><i
+                                                    class="far fa-edit"></i></a>
+                                            @csrf
+                                            @method('DELETE')
+                                    <button class="btn btn-icon btn-danger"><i class="far fa-edit"></i></button>
+                                    
+                                    </form>
                                         </td>
                                     </tr>
                                 @endforeach
