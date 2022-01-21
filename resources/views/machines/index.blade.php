@@ -1,15 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    {{--  <div id="app">
-        <div class="main-wrapper">
-            <div class="navbar-bg"></div>
-
-            @include('partials.navbar')
-            @include('partials.sidebar')
-
-            <!-- Main Content -->  --}}
-            {{--  <div class="main-content">  --}}
+ 
                 <section class="section">
                     <div class="section-header">
                         <h1>Mesin</h1>
@@ -45,14 +37,15 @@
                                                     <td>{{ $machines->id }}</td>
                                                     <td>{{ $machines->nama_mesin }}</td>
                                                     <td>{{ $machines->type_mesin }}</td>
-                                                    <td><a href="{{ route('machines.edit', $machines->id) }}"
-                                                            class="btn btn-icon btn-primary"><i
-                                                                class="far fa-edit"></i></a>
+                                                    <td>
                                                         <form method="POST" action="{{ url('machines', $machines->id) }}">
+                                                            <a href="{{ route('machines.edit', $machines->id) }}"
+                                                                class="btn btn-icon btn-primary"><i
+                                                                    class="far fa-edit"></i></a>
                                                             @csrf
                                                             @method('DELETE')
-                                                    <td style="width: 100px"><button class="btn-red">Hapus</button>
-                                                    </td>
+                                                    <button class="btn btn-icon btn-danger"><i class="far fa-edit"></i></button>
+                                                    
                                                     </form>
                                                     </td>
                                                 </tr>
