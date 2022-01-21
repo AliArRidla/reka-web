@@ -16,7 +16,7 @@
     {{-- <link href={{ asset('css/style.css') }} rel="stylesheet" /> --}}
     <link rel="stylesheet" href="{{ asset('stisla/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('stisla/css/components.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('vendor/notyf/notyf.min.css') }}"> --}}
+{{-- <link rel="stylesheet" href="{{ asset('vendor/notyf/notyf.min.css') }}"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
 
 </head>

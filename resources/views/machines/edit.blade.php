@@ -17,28 +17,24 @@
                     <form method="POST" action="{{ url('machines', $machines->id) }}">
                         @csrf
                         @method('PUT')
-                        <!-- {{-- <div class="card-body">
-                                        <div class="form-group">
-                                            <label>ID Mesin</label>
-                                            <input type="text" class="form-control" required="">
-                                        </div> --}} -->
-                        <div class="form-group">
-                            <label>Nama Mesin</label>
-                            <input name="nama_mesin" value="{{ $machines->nama_mesin }}" type="text"
-                                 placeholder="Nama Mesin.">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Nama Mesin</label>
+                                <input name="nama_mesin" value="{{ $machines->nama_mesin }}" type="text"
+                                    placeholder="Nama Mesin." class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Type Mesin</label>
+                                <input name="type_mesin" value="{{ $machines->type_mesin }}" type="text"
+                                    placeholder="Type Mesin" class="form-control">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Type Mesin</label>
-                            <input name="type_mesin" value="{{ $machines->type_mesin }}" type="text"
-                                placeholder="Type Mesin">
+                        <div class="card-footer text-left">
+                            <button class="btn btn-primary" type="submit">Update</button>
                         </div>
+                    </form>
                 </div>
-                <div class="card-footer text-left">
-                    <button class="btn btn-primary" type="submit">Update</button>
-                </div>
-                </form>
             </div>
-        </div>
         </div>
         </div>
     </section>
