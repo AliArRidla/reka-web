@@ -72,3 +72,7 @@ Route::resource('parameters', ParameterController::class);
 // Route::get('/profile/edit_profile', function () {
 //     return view('/profile/edit_profile');
 // });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
