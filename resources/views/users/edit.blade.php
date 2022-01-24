@@ -37,11 +37,13 @@
                                 <input type="text" name="phone" class="form-control" value="{{ $users->phone }}">
                             </div>
                             <div class="form-group">
-                                <label>Roles</label>
-                                <select name="roles" class="form-control" al>
-                                    <option>Admin</option>
+                                <label>Roles</label>    
+                                <select name="roles" class="form-control">
+                                    <option>Admin / IT</option>
                                     <option>Operator</option>
+                                    <option>Manager</option>
                                 </select>
+
                             </div>
                         </div>
                         <div class="card-footer text-left">

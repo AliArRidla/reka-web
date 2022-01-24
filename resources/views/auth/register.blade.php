@@ -97,9 +97,7 @@
 
                                     <div class="form-group">
                                         <label>Roles</label>
-                                        <select class="form-control selectric" id="roles"
-                                            class="form-control @error('roles') is-invalid @enderror" name="roles"
-                                            value="{{ old('roles') }}" required autocomplete="roles">
+                                        <select name="roles" class="form-control" required>
                                             <option>Admin / IT</option>
                                             <option>Operator</option>
                                             <option>Manager</option>
