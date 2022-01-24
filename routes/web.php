@@ -60,9 +60,9 @@ Route::resource('parameters', ParameterController::class);
 // });
 
 // route history
-// Route::get('/history/history', function () {
-//     return view('/history/history');
-// });
+Route::get('/history/history', function () {
+    return view('/history/history');
+});
 
 // //route profile menu
 // Route::get('/profile/view_profile', function () {

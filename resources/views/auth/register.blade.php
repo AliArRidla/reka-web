@@ -71,7 +71,6 @@
                                             <input id="password" type="password"
                                                 class="form-control @error('password') is-invalid @enderror"
                                                 name="password" required autocomplete="new-password">
-
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -86,17 +85,21 @@
                                                 name="password_confirmation" required autocomplete="new-password">
                                         </div>
                                     </div>
-
                                     <div class="form-group">
                                         <label for="phone">Phone</label>
-                                        <input id="phone" type="text" class="form-control" name="phone">
+                                        {{-- <input id="phone" type="text" class="form-control" name="phone"> --}}
+                                        <input id="phone" type="text"
+                                            class="form-control @error('phone') is-invalid @enderror" name="phone"
+                                            value="{{ old('phone') }}" required autocomplete="phone">
                                         <div class="invalid-feedback">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Roles</label>
-                                        <select class="form-control selectric">
+                                        <select class="form-control selectric" id="roles"
+                                            class="form-control @error('roles') is-invalid @enderror" name="roles"
+                                            value="{{ old('roles') }}" required autocomplete="roles">
                                             <option>Admin / IT</option>
                                             <option>Operator</option>
                                             <option>Manager</option>
@@ -141,4 +144,5 @@
     <!-- Page Specific JS File -->
     <script src="../assets/js/page/auth-register.js"></script>
 </body>
+
 </html>
