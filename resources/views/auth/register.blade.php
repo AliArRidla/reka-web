@@ -38,7 +38,7 @@
 
                             <div class="card-body">
                                 <form method="POST" action="{{ route('register') }}">
-
+                                    @csrf
                                     <div class="row">
                                         <div class="form-group col-12">
                                             <label for="name">Nama</label>
