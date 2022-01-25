@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../assets/css/components.css">
 </head>
 
+
 <body>
     <div id="app">
         <section class="section">

@@ -59,7 +59,7 @@ Route::resource('parameters', ParameterController::class);
 //     return view('users/edit_users');
 // });
 
-// route history
+// route history 
 Route::get('/history/history', function () {
     return view('/history/history');
 });
