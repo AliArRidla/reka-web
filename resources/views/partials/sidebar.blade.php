@@ -9,7 +9,7 @@
         <ul class="sidebar-menu">
             <li class="menu-header">Menu</li>
             <li class="nav-item dropdown">
-                <a href="" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                <a href="" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-th-large"></i>
                     <span>Mesin</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ URL::to('machines') }}">Daftar Mesin</a></li>
@@ -17,7 +17,7 @@
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a href="" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                <a href="" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-user"></i>
                     <span>User Admin</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ URL::to('users') }}">Daftar Users</a></li>
@@ -25,7 +25,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                <a href="" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-plug"></i>
                     <span>Parameters Mesin</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ URL::to('parameters') }}">Daftar Parameters</a></li>
@@ -33,7 +33,7 @@
                 </ul>               
             </li>
             <li class="nav-item">
-                <a href="../history/history" class="nav-link"><i class="fas fa-columns"></i>
+                <a href="../history/history" class="nav-link"><i class="fas fa-file-alt"></i>
                     <span>History</span></a>
             </li>
         </ul>
