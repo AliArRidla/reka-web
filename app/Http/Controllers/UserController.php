@@ -16,7 +16,9 @@ class UserController extends Controller
     {
         //
         $users = User::all();
-        return view('users.index', compact('users'));
+        return view('users.index', compact(
+            'users'
+        ));
     }
 
     /**
@@ -71,11 +73,10 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $users = User::findOrFail($id);
-
-        return view('users.edit', [
-            'users' => $users
-        ]);
+        $users = User::find($id);
+        return view('users.edit', compact(
+            'users'
+        ));
     }
 
     /**
@@ -87,6 +88,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $request->validate([
             'name' => 'required',
             'email' => 'required',
@@ -111,7 +113,7 @@ class UserController extends Controller
         $users = User::find($id);
 
         $users->delete();
-     
-        return back()->with('success',' Data berhasil dihapus.');
+
+        return back()->with('success', ' Data berhasil dihapus.');
     }
 }

@@ -15,9 +15,9 @@
             <h2 class="section-title">Edit Data Users</h2>
             <div class="container">
                 <div class="card">
-                    <form method="POST" action="{{ url('users', $users->id) }}">
+                    <form method="POST" action="{{ url('users/' .$users->id) }}">
                         @csrf
-                        @method('PUT')
+                        <input type="hidden" name="_method" value="PATCH">
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Nama</label>
@@ -37,10 +37,11 @@
                                 <input type="text" name="phone" class="form-control" value="{{ $users->phone }}">
                             </div>
                             <div class="form-group">
-                                <label>Roles</label>
-                                <select name="roles" class="form-control" al>
-                                    <option>Admin</option>
+                                <label>Roles</label>    
+                                <select name="roles" class="form-control" value="{{ $users->roles }}">
+                                    <option>Admin / IT</option>
                                     <option>Operator</option>
+                                    <option>Manager</option>
                                 </select>
                             </div>
                         </div>

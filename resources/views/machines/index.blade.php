@@ -44,7 +44,7 @@
                                                                     class="far fa-edit"></i></a>
                                                             @csrf
                                                             @method('DELETE')
-                                                    <button class="btn btn-icon btn-danger"><i class="far fa-edit"></i></button>
+                                                    <button class="btn btn-icon btn-danger"><i class="fas fa-times"></i></button>
                                                     
                                                     </form>
                                                     </td>

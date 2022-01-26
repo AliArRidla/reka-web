@@ -11,9 +11,6 @@
                 <div class="d-sm-none d-lg-inline-block">{{ Auth::user()->name }}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <a href="/profile/view_profile" class="dropdown-item has-icon">
-                    <i class="far fa-user"></i> Profile
-                </a>
                 <a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                     <i class="fas fa-sign-out-alt"></i>

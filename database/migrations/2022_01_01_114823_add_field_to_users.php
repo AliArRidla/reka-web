@@ -15,8 +15,8 @@ class AddFieldToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             // menambahkan field roles
-            $table->string('roles')->after('email')->default('OPERATOR');
             $table->string('phone')->after('email')->nullable();
+            $table->string('roles')->after('phone')->default('OPERATOR');
             // $table->text('profile_photo_path')->nullable();
         });
     }
