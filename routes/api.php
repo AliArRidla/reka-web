@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\API\ParameterController;
 use App\Http\Controllers\API\MesinController;
 use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
@@ -21,5 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('mesins', [MesinController::class, 'all']);
+Route::get('parameters', [ParameterController::class, 'all']);
 Route::post('register', [UserController::class, 'register']);
 Route::post('login', [UserController::class, 'login']);
