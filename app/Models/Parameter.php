@@ -24,7 +24,7 @@ class Parameter extends Model
         return $this->hasMany(Pengecekan::class,'id_parameter','id');
     }
 
-    public function mesin(){
+    public function mesins(){
         return $this->hasMany(Mesin::class,'id_mesin','id');
     }
 

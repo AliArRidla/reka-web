@@ -6,9 +6,12 @@ use App\Models\Parameter;
 use Illuminate\Http\Request;
 use App\Helpers\ResponseFormatter;
 use App\Http\Controllers\Controller;
+use App\Models\Mesin;
 
 class ParameterController extends Controller
 {
+  
+
     // get all data
     public function all(Request $request)
     {
@@ -18,7 +21,8 @@ class ParameterController extends Controller
 
         // jika user ada memasukkan id
         if ($id) {
-            $parameters = Parameter::find($id);
+            // $parameters = Parameter::find($id);
+            $parameters = Mesin::with(['parameters'])->find($id);
             if ($parameters) {
                 return ResponseFormatter::success(
                     $parameters,

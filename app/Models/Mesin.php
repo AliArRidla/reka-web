@@ -20,9 +20,13 @@ class Mesin extends Model
     ];
 
     // tabel yang berelasi
-    public function parameters()
-    {
-        return $this->hasMany(Parameters::class,'id_mesin','id');
+    // public function parameters()
+    // {
+    //     return $this->hasMany(Parameters::class,'id_mesin','id');
+    // }
+
+    public function parameters(){
+        return $this->hasMany(Parameter::class,'id_mesin','id');
     }
 
     // ada di pengecekans
