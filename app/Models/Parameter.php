@@ -25,8 +25,9 @@ class Parameter extends Model
     }
 
     public function mesins(){
-        return $this->hasMany(Mesin::class,'id_mesin','id');
+        return $this->hasMany(Mesin::class,'id_parameters','id');
     }
+    
 
     // public function 
 }

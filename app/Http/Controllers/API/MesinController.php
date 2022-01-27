@@ -13,31 +13,38 @@ class MesinController extends Controller
     public function all(Request $request)
     {
         $id = $request->input('id');
+        $limit = $request->input('limit', 6);
         $nama_mesin = $request->input('nama_mesin');
         $type_mesin = $request->input('type_mesin ');
+        $parameters = $request->input('parameters');
 
         // jika user ada memasukkan id
         if ($id) {
-            $mesins = Mesin::find($id);
-            if ($mesins) {
+            $mesin = Mesin::with(['parameters'])->find($id);
+            if ($mesin)
                 return ResponseFormatter::success(
-                    $mesins,
+                    $mesin,
                     'Data mesin berhasil diambil'
                 );
-            } else {
+            else
                 return ResponseFormatter::error(
                     null,
                     'Data mesin tidak berhasil diambil',
                     404
                 );
-            }
         }
 
+        $mesin = Mesin::with(['parameters']);
+
+        if ($parameters)
+            $mesin->where('id_parameters', $parameters);
+
+
         // jika tidak maka 
-        $mesins = Mesin::all();
+        // $mesin = Mesin::all();
         return ResponseFormatter::success(
-            $mesins,
-            'Data list mesins berhasil diambil'
+            $mesin->paginate($limit),
+            'Data list mesin berhasil diambil'
         );
     }
 
