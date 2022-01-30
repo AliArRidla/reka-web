@@ -58,16 +58,22 @@
                                             @php
                                                 $i = 1;
                                             @endphp
-                                            @foreach ($parameters as $item)
+                                            @foreach ($parameters as $parameters)
                                                 <tr>
                                                     <th scope="row">{{ $i++ }}</th>
-                                                    <td>{{ $item->id }}</td>
-                                                    <td>{{ $item->nama_parameter }}</td>
-                                                    <td>{{ $item->id_mesin }}</td>
-                                                    <td><a href="edit_mesin" class="btn btn-icon btn-primary"><i
+                                                    <td>{{ $parameters->id }}</td>
+                                                    <td>{{ $parameters->nama_parameter }}</td>
+                                                    <td>{{ $parameters->id_mesin }}</td>
+                                                    <td>
+                                                        <form method="POST"
+                                                            action="{{ url('parameters', $parameters->id) }}"></form>
+                                                        <a href="{{ route('parameters.edit', $parameters->id) }}"
+                                                            class="btn btn-icon btn-primary"><i
                                                                 class="far fa-edit"></i></a>
-                                                        <a href="#" class="btn btn-icon btn-danger"><i
-                                                                class="fas fa-times"></i></a>
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="btn btn-icon btn-danger"><i
+                                                                class="fas fa-times"></i></button>
                                                     </td>
                                                 </tr>
                                             @endforeach
