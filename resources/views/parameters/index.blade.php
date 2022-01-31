@@ -58,22 +58,24 @@
                                             @php
                                                 $i = 1;
                                             @endphp
-                                            @foreach ($parameters as $parameter)
+                                            @foreach ($parameters as $item)
                                                 <tr>
                                                     <th scope="row">{{ $i++ }}</th>
-                                                    <td>{{ $parameter->id }}</td>
-                                                    <td>{{ $parameter->nama_parameter }}</td>
-                                                    <td>{{ $parameter->id_mesin }}</td>
+                                                    <td>{{ $item->id }}</td>
+                                                    <td>{{ $item->nama_parameter }}</td>
+                                                    <td>{{ $item->id_mesin }}</td>
                                                     <td>
                                                         <form method="POST"
-                                                            action="{{ url('parameters', $parameter->id) }}"></form>
-                                                        <a href="{{ route('parameters.edit', $parameter->id) }}"
-                                                            class="btn btn-icon btn-primary"><i
-                                                                class="far fa-edit"></i></a>
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button class="btn btn-icon btn-danger"><i
-                                                                class="fas fa-times"></i></button>
+                                                            action="{{ url('parameters', $item->id) }}">
+                                                            <a href="{{ route('parameters.edit', $item->id) }}"
+                                                                class="btn btn-icon btn-primary"><i
+                                                                    class="far fa-edit"></i></a>
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button class="btn btn-icon btn-danger"><i
+                                                                    class="fas fa-times"></i></button>
+
+                                                        </form>
                                                     </td>
                                                 </tr>
                                             @endforeach

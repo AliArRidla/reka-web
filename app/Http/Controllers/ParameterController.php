@@ -16,7 +16,7 @@ class ParameterController extends Controller
     public function index()
     {
         $parameters = Parameter::all();
-        return view('parameters.index', compact('parameters'));
+        return view('parameters.index',compact('parameters'));
     }
 
     /**
@@ -27,7 +27,7 @@ class ParameterController extends Controller
     public function create()
     {
         $mesins = Mesin::all();
-        return view('parameters.create', compact('mesins'));
+        return view('parameters.create',compact('mesins'));
     }
 
     /**
@@ -45,11 +45,12 @@ class ParameterController extends Controller
         ]);
 
         // return redirect()->index();
-        $input = $request->all();
+        $input = $request->all();        
         $parameter = Parameter::create($input);
         $parameters = Parameter::all();
         // var_dump($parameter);
-        return view('parameters.index', compact('parameters'))->with('success', ' Parameters baru berhasil ditambah.');
+        return view('parameters.index',compact('parameters'))->with('success', ' Parameters baru berhasil ditambah.');   
+
     }
 
     /**
@@ -86,28 +87,22 @@ class ParameterController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'nama_parameter' => 'required',
-            'id_mesin' => 'required',
-        ]);
-
-        $parameters = Parameter::find($id)->update($request->all());
-
-        return back()->with('success', ' Data telah diperbaharui!');
+        //
     }
+
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
     public function destroy($id)
     {
+        //
         $parameters = Parameter::find($id);
 
         $parameters->delete();
 
-        return back()->with('success', ' Data berhasil dihapus.');
+        return back()->with('success', ' Penghapusan berhasil.');
     }
 }
