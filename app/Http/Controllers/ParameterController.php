@@ -104,18 +104,10 @@ class ParameterController extends Controller
 
     public function destroy($id)
     {
-<<<<<<< HEAD
-        //
-=======
->>>>>>> cec21ad6573f20ba978579761f2eb1ed93cdb32f
         $parameters = Parameter::find($id);
 
         $parameters->delete();
 
-<<<<<<< HEAD
-        return back()->with('success', ' Penghapusan berhasil.');
-=======
         return back()->with('success', ' Data berhasil dihapus.');
->>>>>>> cec21ad6573f20ba978579761f2eb1ed93cdb32f
     }
 }
