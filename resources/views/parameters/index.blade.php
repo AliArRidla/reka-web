@@ -64,10 +64,18 @@
                                                     <td>{{ $item->id }}</td>
                                                     <td>{{ $item->nama_parameter }}</td>
                                                     <td>{{ $item->id_mesin }}</td>
-                                                    <td><a href="edit_mesin" class="btn btn-icon btn-primary"><i
-                                                                class="far fa-edit"></i></a>
-                                                        <a href="#" class="btn btn-icon btn-danger"><i
-                                                                class="fas fa-times"></i></a>
+                                                    <td>
+                                                        <form method="POST"
+                                                            action="{{ url('parameters', $item->id) }}">
+                                                            <a href="{{ route('parameters.edit', $item->id) }}"
+                                                                class="btn btn-icon btn-primary"><i
+                                                                    class="far fa-edit"></i></a>
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button class="btn btn-icon btn-danger"><i
+                                                                    class="fas fa-times"></i></button>
+
+                                                        </form>
                                                     </td>
                                                 </tr>
                                             @endforeach

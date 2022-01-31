@@ -73,6 +73,9 @@ class ParameterController extends Controller
     public function edit($id)
     {
         //
+        $parameters = Parameter::findOrFail($id);
+
+        return view('parameters.edit', compact('parameters'));
     }
 
     /**
@@ -96,5 +99,10 @@ class ParameterController extends Controller
     public function destroy($id)
     {
         //
+        $parameters = Parameter::find($id);
+
+        $parameters->delete();
+
+        return back()->with('success', ' Penghapusan berhasil.');
     }
 }
